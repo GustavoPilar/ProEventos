@@ -11,11 +11,15 @@ public class EventoController : ControllerBase
     // CONSTRUTOR
     
     private readonly DataContext _context;
+    // CONTEXTO DO MEU BANCO DE DADOS
+    // CONSTRUTOR RECEBE O CONTEXTO
     public EventoController(DataContext context)
     {
             _context = context;
     }
 
+    // A PATIR DO CONTEXTO, É POSSÍVEL MEXER COM O BANCO
+    // PODENDO CONSULTAR, DELETAR, ATUALIZAR E ADICIONAR (CRUD)
     [HttpGet]
     public IEnumerable<Evento> Get()
     {
@@ -25,7 +29,7 @@ public class EventoController : ControllerBase
     [HttpGet("{id}")]
     public Evento GetById(int id)
     {
-        return _context.Eventos.FirstOrDefault(e => e.EventoId == id);
+        return _context.Eventos.FirstOrDefault(e => e.EventoId == id); // Possivel retorno null
     }
 
     [HttpPost]

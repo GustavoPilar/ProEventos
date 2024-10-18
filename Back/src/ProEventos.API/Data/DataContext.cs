@@ -7,15 +7,13 @@ using ProEventos.API.models;
 
 namespace ProEventos.API.Data
 {
+    // A CLASSE DE CONTEXTO DO BANCO DE DADOS HERDA DO DBCONTEXT DO ENTITY FRAMEWORK CORE
     public class DataContext : DbContext
     {
 
-        public DataContext(DbContextOptions<DataContext> options) : base(options)
-        {
-            
-        }
+        public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
-        //Mapeia o meu banco de dados de acordo com as propriedades que a <entidade> contém
+        // MAPEIA O BANCO DE DADOS DE ACORDO COM AS PROPRIEDADES DE <ENTIDADE>
         public DbSet<Evento> Eventos { get; set; }
     }
 }
