@@ -1,11 +1,60 @@
-<h1>Eventos</h1>
-
-<div *ngFor="let evento of eventos">
-    <p><b>Tema:</b> {{evento.tema}}</p>
-    <p><b>Local:</b> {{evento.local}}</p>
-    <p><b>Data:</b> {{evento.dataEvento}}</p>
-    <p><b>Quantidade de Pessoas:</b> {{evento.qtdPessoas}}</p>
-    <p><b>Lote:</b> {{evento.lote}}</p>
-    <p><b>Imagem:</b> {{evento.imagemURL}}</p>
+<h2>Eventos</h2>
+<div class="text-success">
     <hr>
 </div>
+
+<form class="row row-cols-lg-auto align-items-center mb-2">
+    <div class="form-group">
+        <label class="visually-hidden" for="inlineFormInputGroupUserName"></label>
+        <input type="text" class="form-control" placeholder="Buscar" [(ngModel)]="setFilterList" [ngModelOptions]="{standalone: true}">
+    </div>
+</form>
+
+<h3>Evento: {{getfilterList}}</h3>
+<table class="table table-striped text-center">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">
+                <button type="button" class="btn btn-outline-light btn-sm" (click)="alterImg()">
+                    <i [classList]="classEye"></i>
+                </button>
+            </th>
+            <th scope="col">#</th>
+            <th scope="col">Tema</th>
+            <th scope="col">Local</th>
+            <th scope="col">Data</th>
+            <th scope="col">Qtd de Pessoas</th>
+            <th scope="col">Lote</th>
+            <th scope="col">Opções</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="eventos && eventos.length" class="text-center">
+        <tr *ngFor="let evento of eventosFiltrados">
+            <td>
+                <img src="/assets/{{evento.imagemURL}}"
+                alt="imagem de evento"
+                class="rounded mx-auto"
+                [style.width.px]="imageWidth"
+                [collapse]="showImg" [isAnimated]="true"
+                >
+            </td>
+            <td>{{evento.eventoId}}</td>
+            <td>{{evento.tema}}</td>
+            <td>{{evento.local}}</td>
+            <td>{{evento.dataEvento}}</td>
+            <td>{{evento.qtdPessoas}}</td>
+            <td>{{evento.lote}}</td>
+            <td class="mx-auto p-2">
+                <button type="button" class="btn btn-primary btn-sm me-2">Editar</button>
+                <button type="button" class="btn btn-danger btn-sm">Deletar</button>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot *ngIf="!eventos || !eventosFiltrados.length">
+        <tr>
+            <td colspan="8">
+                <h4>Nenhum Evento(s) Encontrado(s)!</h4>
+            </td>
+        </tr>
+    </tfoot>
+</table>
