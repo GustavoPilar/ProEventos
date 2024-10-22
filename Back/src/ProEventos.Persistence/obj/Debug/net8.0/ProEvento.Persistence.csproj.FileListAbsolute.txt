@@ -1,0 +1,16 @@
+C:\Users\GustavoHenriquePilar\Desktop\proeventosv2\Back\src\ProEventos.Persistence\bin\Debug\net8.0\ProEvento.Persistence.deps.json
+C:\Users\GustavoHenriquePilar\Desktop\proeventosv2\Back\src\ProEventos.Persistence\bin\Debug\net8.0\ProEvento.Persistence.dll
+C:\Users\GustavoHenriquePilar\Desktop\proeventosv2\Back\src\ProEventos.Persistence\bin\Debug\net8.0\ProEvento.Persistence.pdb
+C:\Users\GustavoHenriquePilar\Desktop\proeventosv2\Back\src\ProEventos.Persistence\obj\Debug\net8.0\ProEvento.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\GustavoHenriquePilar\Desktop\proeventosv2\Back\src\ProEventos.Persistence\obj\Debug\net8.0\ProEvento.Persistence.AssemblyInfoInputs.cache
+C:\Users\GustavoHenriquePilar\Desktop\proeventosv2\Back\src\ProEventos.Persistence\obj\Debug\net8.0\ProEvento.Persistence.AssemblyInfo.cs
+C:\Users\GustavoHenriquePilar\Desktop\proeventosv2\Back\src\ProEventos.Persistence\obj\Debug\net8.0\ProEvento.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\GustavoHenriquePilar\Desktop\proeventosv2\Back\src\ProEventos.Persistence\obj\Debug\net8.0\ProEvento.Persistence.sourcelink.json
+C:\Users\GustavoHenriquePilar\Desktop\proeventosv2\Back\src\ProEventos.Persistence\obj\Debug\net8.0\ProEvento.Persistence.dll
+C:\Users\GustavoHenriquePilar\Desktop\proeventosv2\Back\src\ProEventos.Persistence\obj\Debug\net8.0\refint\ProEvento.Persistence.dll
+C:\Users\GustavoHenriquePilar\Desktop\proeventosv2\Back\src\ProEventos.Persistence\obj\Debug\net8.0\ProEvento.Persistence.pdb
+C:\Users\GustavoHenriquePilar\Desktop\proeventosv2\Back\src\ProEventos.Persistence\obj\Debug\net8.0\ref\ProEvento.Persistence.dll
+C:\Users\GustavoHenriquePilar\Desktop\proeventosv2\Back\src\proeventos.persistence\bin\Debug\net8.0\ProEventos.Domain.dll
+C:\Users\GustavoHenriquePilar\Desktop\proeventosv2\Back\src\proeventos.persistence\bin\Debug\net8.0\ProEventos.Domain.pdb
+C:\Users\GustavoHenriquePilar\Desktop\proeventosv2\Back\src\proeventos.persistence\obj\Debug\net8.0\ProEvento.Persistence.csproj.AssemblyReference.cache
+C:\Users\GustavoHenriquePilar\Desktop\proeventosv2\Back\src\proeventos.persistence\obj\Debug\net8.0\ProEvent.384C2B23.Up2Date
