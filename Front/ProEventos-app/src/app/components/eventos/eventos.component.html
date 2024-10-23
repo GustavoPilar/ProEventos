@@ -1,7 +1,4 @@
-<h2>Eventos</h2>
-<div class="text-success">
-    <hr>
-</div>
+<app-titulos></app-titulos>
 
 <form class="row row-cols-lg-auto align-items-center mb-2">
     <div class="form-group">
@@ -16,7 +13,7 @@
         <tr>
             <th scope="col">
                 <button type="button" class="btn btn-outline-light btn-sm" (click)="alterImg()">
-                    <i [classList]="classEye"></i>
+                    <i class="{{!showImg ? 'fa fa-eye-slash' : 'fa fa-eye'}}"></i>
                 </button>
             </th>
             <th scope="col">#</th>
@@ -38,15 +35,19 @@
                 [collapse]="showImg" [isAnimated]="true"
                 >
             </td>
-            <td>{{evento.eventoId}}</td>
+            <td>{{evento.id}}</td>
             <td>{{evento.tema}}</td>
             <td>{{evento.local}}</td>
-            <td>{{evento.dataEvento}}</td>
+            <td>{{evento.dataEvento | DateTimeFormatPipe}}</td>
             <td>{{evento.qtdPessoas}}</td>
-            <td>{{evento.lote}}</td>
+            <td>{{evento.lotes}}</td>
             <td class="mx-auto p-2">
-                <button type="button" class="btn btn-primary btn-sm me-2">Editar</button>
-                <button type="button" class="btn btn-danger btn-sm">Deletar</button>
+                <button type="button" class="btn btn-primary btn-sm me-2" tooltip="Editar">
+                    <i class="fa fa-edit"></i>
+                </button>
+                <button type="button" class="btn btn-danger btn-sm" tooltip="Excluir" (click)="openModal(template)">
+                    <i class="fa fa-trash"></i>
+                </button>
             </td>
         </tr>
     </tbody>
@@ -58,3 +59,12 @@
         </tr>
     </tfoot>
 </table>
+
+<ng-template #template>
+    
+  <div class="modal-body text-center">
+    <p>Tem certeza que deseja realizar a ação?</p>
+    <button type="button" class="btn btn-default" (click)="confirm()" >Sim</button>
+    <button type="button" class="btn btn-primary" (click)="decline()" >Não</button>
+  </div>
+</ng-template>
