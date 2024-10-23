@@ -4,19 +4,18 @@ import { FormsModule} from '@angular/forms';
 
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { CollapseDirective } from 'ngx-bootstrap/collapse';
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 import { ToastrService } from 'ngx-toastr';
 
-import { NgxSpinnerService, NgxSpinnerModule  } from "ngx-spinner";
+import { NgxSpinnerModule, NgxSpinnerService  } from "ngx-spinner";
 
 import { EventoService } from '../../services/evento.service';
-
 import { Evento } from '../../model/Evento';
-
-import { DateTimeFormatPipe } from '../../helpers/DateTimeFormat.pipe';
 import { TitulosComponent } from '../../shared/titulos/titulos.component';
+import { DateTimeFormatPipe } from '../../helpers/DateTimeFormat.pipe';
+
 
 @Component({
   selector: 'app-eventos',

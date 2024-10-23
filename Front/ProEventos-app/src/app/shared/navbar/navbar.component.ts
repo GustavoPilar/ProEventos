@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +11,9 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
   imports: [
     CommonModule,
     CollapseModule,
-    BsDropdownModule
+    BsDropdownModule,
+    RouterLink,
+    RouterLinkActive
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'

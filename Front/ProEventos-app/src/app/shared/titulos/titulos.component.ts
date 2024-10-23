@@ -1,17 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-titulos',
   standalone: true,
-  imports: [],
+  imports: [
+    
+  ],
   templateUrl: './titulos.component.html',
   styleUrl: './titulos.component.scss'
 })
-export class TitulosComponent {
+export class TitulosComponent implements OnInit {
+  
+  @Input ({
+    alias: 'titulo',
+    required: true,
+    transform: (value: string) => value.toUpperCase()
+  }) titulo!: string;
 
-  public titulo: string = '';
+  constructor() { }
 
-  public showTitle(titulo : string): void {
-    this.titulo = titulo;
+  ngOnInit(): void {
+    
   }
+
+  
 }
