@@ -1,64 +1,80 @@
-<app-titulos titulo="Eventos"></app-titulos>
+<app-titulos titulo="Eventos" [iconClass]="'fa fa-calendar-alt'" [botaoListar]="true"></app-titulos>
 
-<form class="row row-cols-lg-auto align-items-center mb-2">
-    <div class="form-group">
-        <label class="visually-hidden" for="inlineFormInputGroupUserName"></label>
-        <input type="text" class="form-control" placeholder="Buscar" [(ngModel)]="setFilterList" [ngModelOptions]="{standalone: true}">
+
+<div class="card rounded shadow-sm p-3">
+
+    <div class="d-flex">
+        <div>
+            <form class="row row-cols-lg-auto align-items-center mb-2">
+                <div class="form-group">
+                    <label for="eventoBuscar" class="me-2">Filtro: </label>
+                    <input type="text" id="eventoBuscar" class="form-group" placeholder="Buscar" [(ngModel)]="setFilterList" [ngModelOptions]="{standalone: true}">
+                </div>
+            </form>
+        </div>
+        <div>
+            <a href="#" class="d-flex btn btn-outline-primary ms-auto">
+                <i class="fa fa-plus-circle my-1"></i>
+                <b class="ms-1">Novo</b>
+            </a>
+        </div>
     </div>
-</form>
+    
 
-<h3>Evento: {{getfilterList}}</h3>
-<table class="table table-striped text-center">
-    <thead class="table-dark">
-        <tr>
-            <th scope="col">
-                <button type="button" class="btn btn-outline-light btn-sm" (click)="alterImg()">
-                    <i class="{{!showImg ? 'fa fa-eye-slash' : 'fa fa-eye'}}"></i>
-                </button>
-            </th>
-            <th scope="col">#</th>
-            <th scope="col">Tema</th>
-            <th scope="col">Local</th>
-            <th scope="col">Data</th>
-            <th scope="col">Qtd de Pessoas</th>
-            <th scope="col">Lote</th>
-            <th scope="col">Opções</th>
-        </tr>
-    </thead>
-    <tbody *ngIf="eventos && eventos.length" class="text-center">
-        <tr *ngFor="let evento of eventosFiltrados">
-            <td>
-                <img src="/assets/{{evento.imagemURL}}"
-                alt="imagem de evento"
-                class="rounded mx-auto"
-                [style.width.px]="imageWidth"
-                [collapse]="showImg" [isAnimated]="true"
-                >
-            </td>
-            <td>{{evento.id}}</td>
-            <td>{{evento.tema}}</td>
-            <td>{{evento.local}}</td>
-            <td>{{evento.dataEvento | DateTimeFormatPipe}}</td>
-            <td>{{evento.qtdPessoas}}</td>
-            <td>{{evento.lotes}}</td>
-            <td class="mx-auto p-2">
-                <button type="button" class="btn btn-primary btn-sm me-2" tooltip="Editar">
-                    <i class="fa fa-edit"></i>
-                </button>
-                <button type="button" class="btn btn-danger btn-sm" tooltip="Excluir" (click)="openModal(template)">
-                    <i class="fa fa-trash"></i>
-                </button>
-            </td>
-        </tr>
-    </tbody>
-    <tfoot *ngIf="!eventos || !eventosFiltrados.length">
-        <tr>
-            <td colspan="8">
-                <h4>Nenhum Evento(s) Encontrado(s)!</h4>
-            </td>
-        </tr>
-    </tfoot>
-</table>
+    
+    
+    <table class="table table-striped text-center">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">
+                    <button type="button" class="btn btn-outline-light btn-sm" (click)="alterImg()">
+                        <i class="{{!showImg ? 'fa fa-eye-slash' : 'fa fa-eye'}}"></i>
+                    </button>
+                </th>
+                <th scope="col">#</th>
+                <th scope="col">Tema</th>
+                <th scope="col">Local</th>
+                <th scope="col">Data</th>
+                <th scope="col">Qtd de Pessoas</th>
+                <th scope="col">Lote</th>
+                <th scope="col">Opções</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="eventos && eventos.length" class="text-center">
+            <tr *ngFor="let evento of eventosFiltrados">
+                <td>
+                    <img src="/assets/{{evento.imagemURL}}"
+                    alt="imagem de evento"
+                    class="rounded mx-auto"
+                    [style.width.px]="imageWidth"
+                    [collapse]="showImg" [isAnimated]="true"
+                    >
+                </td>
+                <td>{{evento.id}}</td>
+                <td>{{evento.tema}}</td>
+                <td>{{evento.local}}</td>
+                <td>{{evento.dataEvento | DateTimeFormatPipe}}</td>
+                <td>{{evento.qtdPessoas}}</td>
+                <td>{{evento.lotes}}</td>
+                <td class="mx-auto p-2">
+                    <button type="button" class="btn btn-primary btn-sm me-2" tooltip="Editar">
+                        <i class="fa fa-edit"></i>
+                    </button>
+                    <button type="button" class="btn btn-danger btn-sm" tooltip="Excluir" (click)="openModal(template)">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot *ngIf="!eventos || !eventosFiltrados.length">
+            <tr>
+                <td colspan="8">
+                    <h4>Nenhum Evento(s) Encontrado(s)!</h4>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
 
 <ng-template #template>
     
