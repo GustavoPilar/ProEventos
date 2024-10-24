@@ -1,6 +1,7 @@
 import { FormsModule} from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit, TemplateRef } from '@angular/core';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { CollapseDirective } from 'ngx-bootstrap/collapse';
@@ -11,11 +12,10 @@ import { ToastrService } from 'ngx-toastr';
 
 import { NgxSpinnerModule, NgxSpinnerService  } from "ngx-spinner";
 
-import { EventoService } from '../../../services/evento.service';
-import { Evento } from '../../../model/Evento';
-import { TitulosComponent } from '../../../shared/titulos/titulos.component';
-import { DateTimeFormatPipe } from '../../../helpers/DateTimeFormat.pipe';
-import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { EventoService } from '@app/services/evento.service';
+import { Evento } from '@app/model/Evento';
+import { TitulosComponent } from '@app/shared/titulos/titulos.component';
+import { DateTimeFormatPipe } from '@app/helpers/pipes/DateFormat/DateTimeFmt.pipe';
 
 @Component({
   selector: 'app-evento-lista',

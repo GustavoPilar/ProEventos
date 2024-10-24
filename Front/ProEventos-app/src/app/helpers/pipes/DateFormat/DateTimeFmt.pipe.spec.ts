@@ -1,11 +1,11 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
-import { DateTimeFormatPipe } from './DateTimeFormat.pipe';
+import { DateTimeFmtPipe } from './DateTimeFmt.pipe';
 
-describe('Pipe: DateTimeFormate', () => {
+describe('Pipe: DateTimeFmte', () => {
   it('create an instance', () => {
-    let pipe = new DateTimeFormatPipe();
+    let pipe = new DateTimeFmtPipe();
     expect(pipe).toBeTruthy();
   });
 });

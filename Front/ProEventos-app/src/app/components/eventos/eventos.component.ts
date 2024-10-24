@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TitulosComponent } from '../../shared/titulos/titulos.component';
+import { TitulosComponent } from '@app/shared/titulos/titulos.component';
 import { RouterModule } from '@angular/router';
 
 
