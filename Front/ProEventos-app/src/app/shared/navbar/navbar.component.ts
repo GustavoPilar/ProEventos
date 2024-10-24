@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -20,4 +20,10 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class NavbarComponent {
   isCollapsed = true;
+
+  constructor(private router : Router) {}
+
+  public showMenu(): boolean {
+    return this.router.url !== '/user/login';
+  }
 }
