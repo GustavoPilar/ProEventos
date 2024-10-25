@@ -29,7 +29,7 @@ export class CadastroComponent implements OnInit{
   }
 
   constructor(private formBuilder : FormBuilder) {
-    
+
   }
   ngOnInit(): void {
     this.validation();
@@ -37,8 +37,8 @@ export class CadastroComponent implements OnInit{
 
   public validation(): void {
     this.form = this.formBuilder.group({
-      firstName: ['', [Validators.required, Validators.maxLength(20), Validators.minLength(3)]],
-      lastName: ['', [Validators.required, Validators.maxLength(20), Validators.minLength(3)]],
+      firstName: ['', [Validators.required, Validators.maxLength(20), Validators.minLength(2)]],
+      lastName: ['', [Validators.required, Validators.maxLength(20), Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
       userName: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(20)]],
       password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(16)]],

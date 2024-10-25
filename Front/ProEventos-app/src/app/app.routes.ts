@@ -21,13 +21,13 @@ export const routes: Routes = [
     },
     { path: 'user/perfil', component: PerfilComponent },
     { path: 'eventos', redirectTo: 'eventos/lista'},
-    { 
+    {
         path: 'eventos', component: EventosComponent,
         children: [
             { path: 'detalhe/:id', component: EventoDetalheComponent },
             { path: 'detalhe', component: EventoDetalheComponent },
             { path: 'lista', component: EventoListaComponent},
-        ], 
+        ],
     },
     { path: 'palestrantes', component: PalestrantesComponent },
     { path: 'contatos', component: ContatosComponent },
