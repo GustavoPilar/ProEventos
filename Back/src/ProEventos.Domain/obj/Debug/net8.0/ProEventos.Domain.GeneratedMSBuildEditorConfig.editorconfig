@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProEventos.Domain
-build_property.ProjectDir = C:\proeventos\back\src\ProEventos.Domain\
+build_property.ProjectDir = C:\Users\GustavoHenriquePilar\Desktop\proeventosv2\back\src\ProEventos.Domain\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

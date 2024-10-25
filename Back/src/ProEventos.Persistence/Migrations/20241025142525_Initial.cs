@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace ProEventos.Persistence.Migrations
+namespace proeventos.persistence.Migrations
 {
     /// <inheritdoc />
     public partial class Initial : Migration
@@ -11,6 +11,25 @@ namespace ProEventos.Persistence.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Eventos",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Local = table.Column<string>(type: "TEXT", nullable: false),
+                    DataEvento = table.Column<DateTime>(type: "TEXT", nullable: true),
+                    Tema = table.Column<string>(type: "TEXT", nullable: false),
+                    QtdPessoas = table.Column<int>(type: "INTEGER", nullable: false),
+                    ImagemURL = table.Column<string>(type: "TEXT", nullable: false),
+                    Telefone = table.Column<string>(type: "TEXT", nullable: false),
+                    Email = table.Column<string>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Eventos", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Palestrantes",
                 columns: table => new
@@ -26,31 +45,6 @@ namespace ProEventos.Persistence.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Palestrantes", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Eventos",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Local = table.Column<string>(type: "TEXT", nullable: false),
-                    DataEvento = table.Column<DateTime>(type: "TEXT", nullable: true),
-                    Tema = table.Column<string>(type: "TEXT", nullable: true),
-                    QtdPessoas = table.Column<int>(type: "INTEGER", nullable: false),
-                    ImagemURL = table.Column<string>(type: "TEXT", nullable: false),
-                    Telefone = table.Column<string>(type: "TEXT", nullable: false),
-                    Email = table.Column<string>(type: "TEXT", nullable: false),
-                    PalestranteId = table.Column<int>(type: "INTEGER", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Eventos", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Eventos_Palestrantes_PalestranteId",
-                        column: x => x.PalestranteId,
-                        principalTable: "Palestrantes",
-                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -119,18 +113,15 @@ namespace ProEventos.Persistence.Migrations
                         name: "FK_RedesSociais_Eventos_EventoId",
                         column: x => x.EventoId,
                         principalTable: "Eventos",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_RedesSociais_Palestrantes_PalestranteId",
                         column: x => x.PalestranteId,
                         principalTable: "Palestrantes",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Eventos_PalestranteId",
-                table: "Eventos",
-                column: "PalestranteId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Lotes_EventoId",
