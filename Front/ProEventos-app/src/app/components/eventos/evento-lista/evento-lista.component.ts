@@ -1,4 +1,4 @@
-import { FormsModule} from '@angular/forms';
+import { FormControl, FormsModule} from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit, TemplateRef } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
@@ -15,7 +15,7 @@ import { NgxSpinnerModule, NgxSpinnerService  } from "ngx-spinner";
 import { EventoService } from '@app/services/evento.service';
 import { Evento } from '@app/model/Evento';
 import { TitulosComponent } from '@app/shared/titulos/titulos.component';
-import { DateTimeFormatPipe } from '@app/helpers/pipes/DateFormat/DateTimeFmt.pipe';
+import { DateTimeFmtPipe } from '@app/helpers/pipes/DateFormat/DateTimeFmt.pipe';
 
 @Component({
   selector: 'app-evento-lista',
@@ -34,7 +34,7 @@ import { DateTimeFormatPipe } from '@app/helpers/pipes/DateFormat/DateTimeFmt.pi
 
     CollapseDirective,
     
-    DateTimeFormatPipe,
+    DateTimeFmtPipe,
   ],
   providers: [
     BsModalService,
@@ -54,6 +54,7 @@ export class EventoListaComponent implements OnInit {
   public imageWidth: number = 100;
   public showImg: boolean = false;
   private _filterList: string = '';
+  public eventoId = 0;
 
   constructor(
     private eventoService : EventoService,
@@ -86,7 +87,9 @@ export class EventoListaComponent implements OnInit {
   }
 
 
-  openModal(template: TemplateRef<void>) {
+  openModal(event: any, template: TemplateRef<void>, id: number): void {
+    event.stopPropagation();
+    this.eventoId = id;
     this.modalRef = this.modalService.show(template, { class: 'modal-sm' });
   }
  
@@ -122,5 +125,4 @@ export class EventoListaComponent implements OnInit {
         }
       )
   }
-  
 }

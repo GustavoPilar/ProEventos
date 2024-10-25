@@ -1,4 +1,4 @@
 export class Constants {
-    static readonly DATE_FMT = 'dd/MM/yyyy';
-    static readonly DATE_TIME = `${this.DATE_FMT} hh:mm`;
+    static readonly DATE_FMT = 'yyy-MM-dd';
+    static readonly DATE_TIME = `${Constants.DATE_FMT} HH:mm`;
 }

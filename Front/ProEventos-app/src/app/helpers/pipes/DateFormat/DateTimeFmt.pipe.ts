@@ -8,7 +8,7 @@ import { Constants } from '@app/util/constants';
   name: 'DateTimeFmtPipe',
   standalone: true
 })
-export class DateTimeFormatPipe extends DatePipe implements PipeTransform {
+export class DateTimeFmtPipe extends DatePipe implements PipeTransform {
 
   override transform(value: any, args?: any): any {
     return super.transform(value, Constants.DATE_TIME);
