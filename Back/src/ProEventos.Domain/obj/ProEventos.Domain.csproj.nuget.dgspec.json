@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {}
+    "C:\\proeventos\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+    "C:\\proeventos\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
+        "projectUniqueName": "C:\\proeventos\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
         "projectName": "ProEventos.Domain",
-        "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
-        "packagesPath": "C:\\Users\\GustavoHenriquePilar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Domain\\obj\\",
+        "projectPath": "C:\\proeventos\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
+        "packagesPath": "C:\\Users\\pilar\\.nuget\\packages\\",
+        "outputPath": "C:\\proeventos\\back\\src\\ProEventos.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\GustavoHenriquePilar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pilar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

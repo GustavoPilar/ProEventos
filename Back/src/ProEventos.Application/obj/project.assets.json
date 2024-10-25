@@ -2115,19 +2115,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\GustavoHenriquePilar\\.nuget\\packages\\": {}
+    "C:\\Users\\pilar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
+      "projectUniqueName": "C:\\proeventos\\back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
       "projectName": "ProEventos.Application",
-      "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
-      "packagesPath": "C:\\Users\\GustavoHenriquePilar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Application\\obj\\",
+      "projectPath": "C:\\proeventos\\back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
+      "packagesPath": "C:\\Users\\pilar\\.nuget\\packages\\",
+      "outputPath": "C:\\proeventos\\back\\src\\ProEventos.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\GustavoHenriquePilar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pilar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2135,18 +2135,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
-              "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
+            "C:\\proeventos\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+              "projectPath": "C:\\proeventos\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
             },
-            "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
-              "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj"
+            "C:\\proeventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
+              "projectPath": "C:\\proeventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj"
             }
           }
         }
