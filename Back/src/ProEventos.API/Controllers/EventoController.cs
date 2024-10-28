@@ -110,7 +110,7 @@ public class EventoController : ControllerBase
             if (eventos == null) return NoContent();
 
             return await service.DeleteEvento(id) ?
-                Ok("Deletado.") : 
+                Ok(new { message = "Deletado."}) : 
                 throw new Exception("Houve algum problema não específico ao tentar deletar Evento");
         }
         catch (Exception ex)
