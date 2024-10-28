@@ -20,8 +20,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
 
 builder.Services.AddScoped<IEventoService, EventoService>();
+builder.Services.AddScoped<ILoteService, LoteService>();
+
 builder.Services.AddScoped<IGeralPersistence, GeralProEventosPersistence>();
 builder.Services.AddScoped<IEventoPersistence, EventoPersistence>();
+builder.Services.AddScoped<ILotePersistence, LotePersistence>();
 
 // Add Data Base Context
 builder.Services.AddDbContext<DataContext>(
