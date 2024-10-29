@@ -12,6 +12,7 @@ import { Evento } from '../model/Evento';
 export class EventoService {
 
   private path: string = 'http://localhost:5082/api/evento';
+  
   constructor(private http : HttpClient) { }
 
   public getEventos(): Observable<Evento[]> {

@@ -25,7 +25,7 @@ namespace ProEventos.Application
                 var lote = mapper.Map<Lote>(model);
                 lote.EventoId = eventoId;
 
-                geralPersistence.Add(lote);
+                geralPersistence.Add<Lote>(lote);
                 
                 await geralPersistence.SaveChangesAsync();
 

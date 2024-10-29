@@ -47,7 +47,7 @@ import { DateTimeFmtPipe } from '@app/helpers/pipes/DateFormat/DateTimeFmt.pipe'
 })
 export class EventoListaComponent implements OnInit {
 
-  modalRef?: BsModalRef;
+  modalRef!: BsModalRef;
   
   public eventos: Evento[] = [];
   public eventosFiltrados: Evento[] = [];
@@ -94,7 +94,7 @@ export class EventoListaComponent implements OnInit {
   }
  
   confirm(): void {
-    this.modalRef?.hide();
+    this.modalRef.hide();
     this.spinner.show();
 
     this.eventoService.deleteEvento(this.eventoId).subscribe({
@@ -113,7 +113,7 @@ export class EventoListaComponent implements OnInit {
   }
  
   decline(): void {
-    this.modalRef?.hide();
+    this.modalRef.hide();
   }
 
   public alterImg(): void {

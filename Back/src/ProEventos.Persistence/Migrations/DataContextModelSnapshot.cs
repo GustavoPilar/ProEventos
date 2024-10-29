@@ -7,7 +7,7 @@ using ProEventos.Persistence.Contexto;
 
 #nullable disable
 
-namespace proeventos.persistence.Migrations
+namespace Proeventos.Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
     partial class DataContextModelSnapshot : ModelSnapshot

@@ -13,7 +13,7 @@ namespace ProEventos.Application.Dtos
         public string ImagemURL { get; set; }
         public string Telefone { get; set; }
         public string Email { get; set; }
-        public IEnumerable<RedeSocialDto>? RedesSociais { get; set; }
-        public IEnumerable<EventoDto>? Eventos { get; set; }
+        public IEnumerable<RedeSocialDto> RedesSociais { get; set; }
+        public IEnumerable<EventoDto> Eventos { get; set; }
     }
 }

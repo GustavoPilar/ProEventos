@@ -10,7 +10,7 @@ namespace ProEventos.Application.Dtos
     {
         public int Id { get; set; }
         public string Local { get; set; }
-        public string? DataEvento { get; set; }
+        public string DataEvento { get; set; }
 
         [
             Required(ErrorMessage = "O campo {0} é obrigratório!"),
@@ -40,6 +40,7 @@ namespace ProEventos.Application.Dtos
             EmailAddress(ErrorMessage = "É necessário ser um {0} válido.")
         ]
         public string Email { get; set; }
+        
         public IEnumerable<LoteDto>? Lotes { get; set; }
         public IEnumerable<RedeSocialDto>? RedesSociais { get; set; }
         public IEnumerable<PalestranteDto>? Palestrantes { get; set; }

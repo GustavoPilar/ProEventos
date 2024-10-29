@@ -9,11 +9,8 @@ namespace ProEventos.Domain
 {
     public class PalestranteEvento
     {
-        [ForeignKey(nameof(Palestrante))]
         public int PalestranteId { get; set; }
         public Palestrante Palestrante { get; set; }
-        
-        [ForeignKey(nameof(Evento))]
         public int EventoId { get; set; }
         public Evento Evento { get; set; }
     }

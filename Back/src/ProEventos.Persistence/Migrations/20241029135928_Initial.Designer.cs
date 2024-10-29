@@ -8,10 +8,10 @@ using ProEventos.Persistence.Contexto;
 
 #nullable disable
 
-namespace proeventos.persistence.Migrations
+namespace Proeventos.Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20241025142525_Initial")]
+    [Migration("20241029135928_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
