@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using ProEventos.Application;
 using ProEventos.Application.Contratos;
 using ProEventos.Persistence;
@@ -53,6 +54,12 @@ app.UseCors(
     .AllowAnyMethod()
     .AllowAnyOrigin()
 );
+
+// USA ARQUIVOS ESTÁTICOS (EX.: IMAGENS)
+app.UseStaticFiles(new StaticFileOptions() {
+    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Resources")),
+    RequestPath = new PathString("/Resources")
+});
 
 app.MapControllers();
 
