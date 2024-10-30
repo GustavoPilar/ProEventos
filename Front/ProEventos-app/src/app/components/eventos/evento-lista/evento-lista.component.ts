@@ -15,7 +15,7 @@ import { NgxSpinnerModule, NgxSpinnerService  } from "ngx-spinner";
 import { EventoService } from '@app/services/evento.service';
 import { Evento } from '@app/model/Evento';
 import { TitulosComponent } from '@app/shared/titulos/titulos.component';
-import { DateTimeFmtPipe } from '@app/helpers/pipes/DateFormat/DateTimeFmt.pipe';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-evento-lista',
@@ -32,9 +32,7 @@ import { DateTimeFmtPipe } from '@app/helpers/pipes/DateFormat/DateTimeFmt.pipe'
     RouterLink,
     RouterLinkActive,
 
-    CollapseDirective,
-    
-    DateTimeFmtPipe,
+    CollapseDirective
   ],
   providers: [
     BsModalService,
@@ -138,5 +136,9 @@ export class EventoListaComponent implements OnInit {
           complete: () => this.spinner.hide()
         }
       )
+  }
+
+  public mostrarImagem(imagemURL: string): string {
+    return (imagemURL !== '') ? `${environment.apiUrl}resources/images/${imagemURL}` : '/assets/semImagem.png';
   }
 }

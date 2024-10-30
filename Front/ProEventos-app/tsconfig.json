@@ -28,7 +28,7 @@
         "./src/app/*"
       ],
       "@envoriments/*": [
-        "./src/enviroments/*"
+        "/src/enviroments/*"
       ]
 
     }

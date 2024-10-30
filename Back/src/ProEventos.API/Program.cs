@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.AspNetCore.Http;
 using ProEventos.Application;
 using ProEventos.Application.Contratos;
 using ProEventos.Persistence;
@@ -42,7 +43,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-else 
+else
 {
     app.UseHttpsRedirection();
 }
@@ -56,7 +57,8 @@ app.UseCors(
 );
 
 // USA ARQUIVOS ESTÁTICOS (EX.: IMAGENS)
-app.UseStaticFiles(new StaticFileOptions() {
+app.UseStaticFiles(new StaticFileOptions()
+{
     FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Resources")),
     RequestPath = new PathString("/Resources")
 });

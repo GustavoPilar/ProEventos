@@ -137,13 +137,19 @@ public class EventoController : ControllerBase
             var eventos = await service.GetEventoByIdAsync(id, true);
             if (eventos == null) return NoContent();
 
-            return await service.DeleteEvento(id) ?
-                Ok(new { message = "Deletado." }) :
+            if (await service.DeleteEvento(id))
+            {
+                DeleteImage(eventos.ImagemURL);
+                return Ok(new { message = "Deletado." });
+            }
+            else
+            {
                 throw new Exception("Houve algum problema não específico ao tentar deletar Evento");
+            }
         }
         catch (Exception ex)
         {
-            return this.StatusCode(StatusCodes.Status500InternalServerError, $"Erro ao tentar deletar Evento. Error: {ex.Message}");
+            return StatusCode(StatusCodes.Status500InternalServerError, $"Erro ao tentar deletar Evento. Error: {ex.Message}");
         }
     }
 
@@ -168,9 +174,9 @@ public class EventoController : ControllerBase
     public void DeleteImage(string imageName)
     {
         var imagePath = Path.Combine(hostEnvironment.ContentRootPath, @"Resources/images", imageName);
-        if (System.IO.File.Exists(imagePath))
-        {
-            System.IO.File.Delete(imagePath);
-        }
+            if (System.IO.File.Exists(imagePath)) {
+                System.IO.File.Delete(imagePath);
+            }
+                
     }
 }

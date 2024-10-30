@@ -18,7 +18,6 @@ import {
 
 import { EventoService } from '@app/services/evento.service';
 import { Evento } from '@app/model/Evento';
-import { DateTimeFmtPipe } from '@app/helpers/pipes/DateFormat/DateTimeFmt.pipe';
 
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
@@ -28,6 +27,7 @@ import { Router } from '@angular/router';
 import { LoteService } from '@app/services/lote.service';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { NgxCurrencyDirective } from "ngx-currency";
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-evento-detalhe',
@@ -36,7 +36,6 @@ import { NgxCurrencyDirective } from "ngx-currency";
     CommonModule,
     ReactiveFormsModule,
     BsDatepickerModule,
-    DateTimeFmtPipe,
     RouterModule,
     RouterLink,
     RouterLinkActive,
@@ -55,6 +54,9 @@ export class EventoDetalheComponent implements OnInit {
   form!: FormGroup;
   estadoSalvar = 'post';
   eventoId: number = 0;
+
+  itemImageUrl = '/assets/upload.png';
+  file: File;
 
   modalRef!: BsModalRef;
 
@@ -135,6 +137,11 @@ export class EventoDetalheComponent implements OnInit {
           next: (evento: Evento) => {
             this.evento = { ...evento };
             this.form.patchValue(this.evento);
+            
+            if(this.evento.imagemURL !== '') {
+              this.itemImageUrl = environment.apiUrl + 'resources/images/' + this.evento.imagemURL
+            }
+
             this.evento.lotes.forEach(lote => {
               this.lotes.push(this.criarLote(lote));
             })
@@ -180,7 +187,7 @@ export class EventoDetalheComponent implements OnInit {
       qtdPessoas: ['', [Validators.required, Validators.max(120000)]],
       telefone: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      imagemURL: ['', Validators.required],
+      imagemURL: [''],
       lotes: this.formBuilder.array([])
     });
   }
@@ -306,5 +313,30 @@ export class EventoDetalheComponent implements OnInit {
 
   public retornaTituloLote(nome: string): string {
     return nome === null || nome === '' ? 'Nome do Lote' : nome;
+  }
+
+  onFileChange(ev: any): void {
+    const reader = new FileReader();
+
+    reader.onload = (event: any) => this.itemImageUrl = event.target.result;
+
+    this.file = ev.target.files;
+    reader.readAsDataURL(this.file[0]);
+
+    this.uploadImage();
+  }
+
+  uploadImage(): void {
+    this.spinner.show();
+    this.eventoService.postUpload(this.eventoId, this.file).subscribe({
+      next: () => {
+          this.carregarEvento();
+          this.toastr.success('Imagem atualizada', 'Sucesso');
+      },
+      error: (err) => {
+          this.toastr.error('Erro ao atualizar a imagem', 'Erro');
+          console.log(err);
+      },
+    }).add(() => this.spinner.hide());
   }
 }

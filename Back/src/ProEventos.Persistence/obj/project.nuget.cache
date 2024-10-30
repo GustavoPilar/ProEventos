@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PXnDekw0eg0=",
+  "dgSpecHash": "nSqS75HwgZg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
+  "projectFilePath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\GustavoHenriquePilar\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\GustavoHenriquePilar\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
