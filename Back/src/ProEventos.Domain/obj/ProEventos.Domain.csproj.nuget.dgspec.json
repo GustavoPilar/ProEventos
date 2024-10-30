@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {}
+    "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+    "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
         "projectName": "ProEventos.Domain",
-        "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
+        "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
         "packagesPath": "C:\\Users\\GustavoHenriquePilar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Domain\\obj\\",
+        "outputPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GustavoHenriquePilar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.10, )"

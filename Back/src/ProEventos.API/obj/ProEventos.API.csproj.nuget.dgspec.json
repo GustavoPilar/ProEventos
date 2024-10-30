@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\proeventos.api\\ProEventos.API.csproj": {}
+    "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.API\\ProEventos.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\proeventos.api\\ProEventos.API.csproj": {
+    "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.API\\ProEventos.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\proeventos.api\\ProEventos.API.csproj",
+        "projectUniqueName": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
         "projectName": "ProEventos.API",
-        "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\proeventos.api\\ProEventos.API.csproj",
+        "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
         "packagesPath": "C:\\Users\\GustavoHenriquePilar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\proeventos.api\\obj\\",
+        "outputPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GustavoHenriquePilar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Application\\ProEventos.Application.csproj": {
-                "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Application\\ProEventos.Application.csproj"
+              "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj": {
+                "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj"
               }
             }
           }
@@ -53,6 +53,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
             },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
@@ -110,14 +114,14 @@
         }
       }
     },
-    "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Application\\ProEventos.Application.csproj": {
+    "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
+        "projectUniqueName": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
         "projectName": "ProEventos.Application",
-        "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
+        "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
         "packagesPath": "C:\\Users\\GustavoHenriquePilar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Application\\obj\\",
+        "outputPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GustavoHenriquePilar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -135,11 +139,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
-                "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
+              "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+                "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
               },
-              "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
-                "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj"
+              "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
+                "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj"
               }
             }
           }
@@ -162,6 +166,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -200,14 +208,14 @@
         }
       }
     },
-    "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+    "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
         "projectName": "ProEventos.Domain",
-        "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
+        "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
         "packagesPath": "C:\\Users\\GustavoHenriquePilar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Domain\\obj\\",
+        "outputPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GustavoHenriquePilar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -242,6 +250,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.10, )"
@@ -279,14 +291,14 @@
         }
       }
     },
-    "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
+    "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
         "projectName": "ProEventos.Persistence",
-        "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
+        "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
         "packagesPath": "C:\\Users\\GustavoHenriquePilar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Persistence\\obj\\",
+        "outputPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GustavoHenriquePilar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -304,8 +316,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
-                "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
+              "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+                "projectPath": "C:\\Users\\GustavoHenriquePilar\\Desktop\\proeventosv2\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
               }
             }
           }
@@ -325,6 +337,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.10, )"
