@@ -9,8 +9,8 @@ namespace ProEventos.Persistence.Contratos
     public interface IEventoPersistence
     {
         // EVENTOS
-        Task<Evento[]> GetAllEventosByTemaAsync(string tema, bool incluirPalestrantes);
-        Task<Evento[]> GetAllEventosAsync(bool incluirPalestrantes);
-        Task<Evento> GetEventoByIdAsync(int id, bool incluirPalestrantes);
+        Task<Evento[]> GetAllEventosByTemaAsync(string tema, bool incluirPalestrantes = false);
+        Task<Evento[]> GetAllEventosAsync(bool incluirPalestrantes = false);
+        Task<Evento> GetEventoByIdAsync(int id, bool incluirPalestrantes = false);
     }
 }

@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProEventos.Persistence
-build_property.ProjectDir = c:\Users\GustavoHenriquePilar\Desktop\proeventosv2\Back\src\ProEventos.Persistence\
+build_property.ProjectDir = C:\Users\GustavoHenriquePilar\Desktop\proeventosv2\Back\src\ProEventos.Persistence\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

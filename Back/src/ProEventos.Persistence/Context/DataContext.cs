@@ -1,14 +1,19 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using ProEventos.Domain;
+using ProEventos.Domain.Identity;
 
 namespace ProEventos.Persistence.Contexto
 {
     // A CLASSE DE CONTEXTO DO BANCO DE DADOS HERDA DO DBCONTEXT DO ENTITY FRAMEWORK CORE
-    public class DataContext : DbContext
+    public class DataContext : IdentityDbContext<User, Role, int,
+                                                IdentityUserClaim<int>,
+                                                UserRole,
+                                                IdentityUserLogin<int>,
+                                                IdentityRoleClaim<int>,
+                                                IdentityUserToken<int>
+                                                >
     {
 
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
@@ -20,17 +25,30 @@ namespace ProEventos.Persistence.Contexto
         public DbSet<RedeSocial> RedesSociais { get; set; }
         public DbSet<PalestranteEvento> PalestrantesEventos { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            builder.Entity<PalestranteEvento>()
-                .HasKey(pe => new {pe.PalestranteId, pe.EventoId});
 
-            builder.Entity<Evento>()
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<UserRole>(userRole =>
+                {
+                    userRole.HasKey(ur => new { ur.UserId, ur.RoleId});
+
+                    userRole.HasOne(ur => ur.Role).WithMany(r => r.UsersRoles).HasForeignKey(ur => ur.RoleId).IsRequired();
+
+                    userRole.HasOne(ur => ur.User).WithMany(r => r.UserRoles).HasForeignKey(ur => ur.UserId).IsRequired();
+                }
+            );
+
+            modelBuilder.Entity<PalestranteEvento>()
+                .HasKey(pe => new { pe.PalestranteId, pe.EventoId });
+
+            modelBuilder.Entity<Evento>()
                 .HasMany(e => e.RedesSociais)
                 .WithOne(rs => rs.Evento)
                 .OnDelete(DeleteBehavior.Cascade);
-            
-            builder.Entity<Palestrante>()
+
+            modelBuilder.Entity<Palestrante>()
                 .HasMany(e => e.RedesSociais)
                 .WithOne(rs => rs.Palestrante)
                 .OnDelete(DeleteBehavior.Cascade);
